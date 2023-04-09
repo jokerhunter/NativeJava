@@ -1,9 +1,7 @@
 package com.mume.Model_4_5_Reflection;
 
-import java.io.File;
 import java.lang.reflect.Constructor;
 import java.lang.reflect.Field;
-import java.util.logging.FileHandler;
 
 public class PersonFieldTest {
     public static void main(String[] args) throws Exception {
