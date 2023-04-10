@@ -1,5 +1,6 @@
 package com.mume.Module_5_2_Java8.FunctionalInterface;
 
+import java.util.Comparator;
 import java.util.function.Consumer;
 import java.util.function.Function;
 import java.util.function.Predicate;
@@ -15,9 +16,18 @@ public class FunctionalInterfaceTest {
             }
         };
 
+        // 自然排序
         Comparable comparable = new Comparable() {
             @Override
             public int compareTo(Object o) {
+                return 0;
+            }
+        };
+
+        // 定制排序
+        Comparator comparator = new Comparator() {
+            @Override
+            public int compare(Object o1, Object o2) {
                 return 0;
             }
         };
