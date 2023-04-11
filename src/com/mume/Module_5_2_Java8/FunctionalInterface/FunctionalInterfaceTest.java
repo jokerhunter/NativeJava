@@ -12,9 +12,10 @@ public class FunctionalInterfaceTest {
         Runnable runnable = new Runnable() {
             @Override
             public void run() {
-
+                System.out.println("Runnable run");
             }
         };
+        Runnable run = () -> System.out.println("Runnable run");
 
         // 自然排序
         Comparable comparable = new Comparable() {
@@ -33,32 +34,44 @@ public class FunctionalInterfaceTest {
         };
 
         // java.util.Function
-        Consumer comsumer = new Consumer<>(){
-            @Override
-            public void accept(Object o) {
+//        Consumer comsumer = new Consumer<>(){
+//            @Override
+//            public void accept(Object o) {
+//                System.out.println("有参数无返回值的方法");
+//            }
+//        };
 
-            }
+        Consumer con = (o) -> {
+            System.out.println(o + "有参数无返回值的构造方法");
         };
+
+        con.accept("tips:");
 
         Supplier supplier = new Supplier() {
             @Override
             public Object get() {
-                return null;
+                return "无参有返回值的构造方法";
             }
         };
+        System.out.println(supplier.get());
 
         Function function = new Function() {
             @Override
             public Object apply(Object o) {
-                return null;
+                return o + "有参数有返回值的构造方法";
             }
         };
+        System.out.println(function.apply("tips:"));
 
         Predicate predicate = new Predicate() {
             @Override
             public boolean test(Object o) {
-                return false;
+                return true;
             }
         };
+        System.out.println(predicate.test("tips"));
+
+        Predicate predicate1 = o -> false;
+        System.out.println(predicate1.test("tips"));
     }
 }
