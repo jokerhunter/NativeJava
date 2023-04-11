@@ -84,6 +84,7 @@ public class MethodReferenceTest {
         System.out.println(comparator1.compare(1,2));
 
         // 8. 使用匿名内部类/方法引用的方式通过类名来调用非静态方法
+        // 一个参数对象作为调用对象来调用方法时，可以使用上述方法
         Comparator<Integer> comparator2 = new Comparator<Integer>() {
             @Override
             public int compare(Integer o1, Integer o2) {
