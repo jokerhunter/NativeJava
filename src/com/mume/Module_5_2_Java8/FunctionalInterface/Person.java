@@ -1,9 +1,11 @@
 package com.mume.Module_5_2_Java8.FunctionalInterface;
 
+import java.util.Comparator;
+
 /**
  * @author mume
  */
-public class Person {
+public class Person implements Comparable<Person> {
     private String name;
     private int age;
 
@@ -41,5 +43,10 @@ public class Person {
                 "name='" + name + '\'' +
                 ", age=" + age +
                 '}';
+    }
+
+    @Override
+    public int compareTo(Person o) {
+        return getName().compareTo(o.getName());
     }
 }
