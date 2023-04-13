@@ -29,6 +29,5 @@ public class OptionalTest {
         System.out.println("integer = " + integer);
         System.out.println(integer.orElse(0));
 
-
     }
 }
