@@ -1,11 +1,9 @@
 package com.mume.Module_5_2_Java8.FunctionalInterface;
 
-import java.util.Arrays;
 import java.util.LinkedList;
 import java.util.List;
-import java.util.Random;
-import java.util.function.Function;
-import java.util.stream.Stream;
+import java.util.Optional;
+import java.util.stream.Collectors;
 
 public class ListPersonStreamTest {
     public static void main(String[] args) {
@@ -42,6 +40,28 @@ public class ListPersonStreamTest {
 //                .skip(2).limit(3).filter(person -> person.getAge() >= 18).forEach(System.out::println);
         // 4.使用map获取所有类的年龄
         list.stream().map(Person::getAge).forEach(System.out::println);
-        // 5.
+        // 5. 实现集合中的所有元素的自然排序并打印
+        list.stream().sorted().forEach(System.out::println);
+
+        // 6. 判断集合中是否没有元素的年龄是大于45岁的
+        // noneMatch(), allMatch()
+        boolean b1 = list.stream().noneMatch(person -> {
+            return person.getAge() > 45;
+        });
+        System.out.println("none > 45:" + b1);
+
+        // 7. 按照指定比较器规则获取集合最大值
+        // max(), min()
+        Optional<Person> max = list.stream().max((o1, o2) -> o1.getAge() - o2.getAge());
+        System.out.println("按照年龄排序后的最大值" + max);
+
+        // 8. 实现将集合中所有元素的年龄映射出来并进行累加打印
+//        Optional<Integer> totalAge = list.stream().map(Person::getAge).reduce((a1, a2) -> a1 + a2);
+        Optional<Integer> totalAge = list.stream().map(Person::getAge).reduce(Integer::sum);
+        System.out.println("所有年龄累加：" + totalAge);
+
+        // 9.实现将集合中所有元素的姓名映射出来并收集到集合中打印
+        list.stream().map(Person::getName).collect(Collectors.toList()).forEach(System.out::println);
+
     }
 }
