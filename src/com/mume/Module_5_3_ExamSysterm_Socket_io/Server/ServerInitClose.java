@@ -1,4 +1,4 @@
-package com.mume.Module_5_3_ExamSysterm.Server;
+package com.mume.Module_5_3_ExamSysterm_Socket_io.Server;
 
 import java.io.IOException;
 import java.io.ObjectInputStream;
@@ -18,6 +18,14 @@ public class ServerInitClose {
     private Socket s;
     private ObjectInputStream ois;
     private ObjectOutputStream oos;
+
+    public ObjectInputStream getOis() {
+        return ois;
+    }
+
+    public ObjectOutputStream getOos() {
+        return oos;
+    }
 
     /**
      * 自定义成员方法实现服务器的初始化操作
@@ -41,10 +49,18 @@ public class ServerInitClose {
      */
     public void serverClose() throws IOException {
         // 4.关闭Socket并释放有关资源
-        oos.close();
-        ois.close();
-        s.close();
-        ss.close();
+        if (null != oos) {
+            oos.close();
+        }
+        if (null != ois) {
+            ois.close();
+        }
+        if (null != s) {
+            s.close();
+        }
+        if (null != ss) {
+            ss.close();
+        }
         System.out.println("服务器关闭");
     }
 

@@ -1,4 +1,4 @@
-package com.mume.Module_5_3_ExamSysterm.Client;
+package com.mume.Module_5_3_ExamSysterm_Socket_io.Client;
 
 import java.io.IOException;
 import java.io.ObjectInputStream;
@@ -10,6 +10,22 @@ public class ClientInitClose {
     private Socket s;
     private ObjectInputStream ois;
     private ObjectOutputStream oos;
+
+    public ObjectInputStream getOis() {
+        return ois;
+    }
+
+    public void setOis(ObjectInputStream ois) {
+        this.ois = ois;
+    }
+
+    public ObjectOutputStream getOos() {
+        return oos;
+    }
+
+    public void setOos(ObjectOutputStream oos) {
+        this.oos = oos;
+    }
 
     /**
      * 自定义成员方法实现客户端的初始化操作

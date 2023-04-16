@@ -1,7 +1,7 @@
-package com.mume.Module_5_3_ExamSysterm.Test;
+package com.mume.Module_5_3_ExamSysterm_Socket_io.Test;
 
-import com.mume.Module_5_3_ExamSysterm.Client.ClientInitClose;
-import com.mume.Module_5_3_ExamSysterm.Client.ClientScanner;
+import com.mume.Module_5_3_ExamSysterm_Socket_io.Client.ClientInitClose;
+import com.mume.Module_5_3_ExamSysterm_Socket_io.Client.ClientScanner;
 
 import java.io.IOException;
 
@@ -10,9 +10,9 @@ public class ClientTest {
         ClientInitClose clientInitClose = new ClientInitClose();
         try {
             clientInitClose.clientInit();
-            ClientView cv = new ClientView();
+            ClientView cv = new ClientView(clientInitClose);
             cv.clientMainPage();
-        } catch (IOException e) {
+        } catch (IOException | ClassNotFoundException e) {
             throw new RuntimeException(e);
         } finally {
             try {

@@ -1,4 +1,4 @@
-package com.mume.Module_5_3_ExamSysterm.Client;
+package com.mume.Module_5_3_ExamSysterm_Socket_io.Client;
 
 import java.util.Scanner;
 

@@ -1,4 +1,4 @@
-package com.mume.Module_5_3_ExamSysterm.model;
+package com.mume.Module_5_3_ExamSysterm_Socket_io.model;
 
 import java.io.Serializable;
 
