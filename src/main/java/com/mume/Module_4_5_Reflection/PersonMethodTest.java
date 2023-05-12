@@ -9,7 +9,7 @@ public class PersonMethodTest {
         try {
             Class clazz = Class.forName("com.mume.Module_4_5_Reflection.Person");
             Constructor constructor = clazz.getConstructor(String.class, int.class);
-            Object object = constructor.newInstance("com/mume", 32);
+            Object object = constructor.newInstance("mume", 32);
 
             Method method = clazz.getMethod("getName");
             System.out.println("调用方法的返回值是：" + method.invoke(object));

@@ -9,12 +9,12 @@ public class ListPersonStreamTest {
     public static void main(String[] args) {
         // 1.准备一个List集合并放入Person类型对象
         List<Person> list = new LinkedList<Person>();
-        list.add(new Person("com/mume", 23));
+        list.add(new Person("mume", 23));
         list.add(new Person("mume1", 13));
         list.add(new Person("mume2", 24));
         list.add(new Person("mume3", 11));
         Person[] persons = {
-            new Person("com/mume", 23),
+            new Person("mume", 23),
             new Person("mume1", 13),
             new Person("mume2", 24),
             new Person("mume3", 11)

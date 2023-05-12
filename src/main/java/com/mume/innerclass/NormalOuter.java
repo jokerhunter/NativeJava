@@ -24,7 +24,7 @@ public class NormalOuter {
 
     public static void main(String[] args) {
         NormalOuter normalOuter = new NormalOuter();
-        NormalInner normalInner = normalOuter.new NormalInner();
+        NormalOuter.NormalInner normalInner = normalOuter.new NormalInner();
         normalInner.show();
         normalInner.show02(0);
     }

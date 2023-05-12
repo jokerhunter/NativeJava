@@ -84,7 +84,7 @@ public class NIODemo01_Buffer {
         System.out.println("------------------------------------");
 
         // 由于上面进行了一次get()，所以position++，所以put从1开始,并且之前的值会被清空
-        byteBuffer.put("com/mume".getBytes()); // byteBuffer变为amume
+        byteBuffer.put("mume".getBytes()); // byteBuffer变为amume
         System.out.println("put2后---缓存限制（不能对该索引后的值进行操作）：" + byteBuffer.limit());
         System.out.println("put2后---缓存位置（下一次操作put的位置）：" + byteBuffer.position());
         System.out.println("------------------------------------");

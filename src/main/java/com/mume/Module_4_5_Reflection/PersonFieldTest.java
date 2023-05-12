@@ -8,7 +8,7 @@ public class PersonFieldTest {
         Class c1 = Class.forName("com.mume.Module_4_5_Reflection.Person");
 
         Constructor constructor = c1.getConstructor(String.class, int.class);
-        Object object = constructor.newInstance("com/mume", 20);
+        Object object = constructor.newInstance("mume", 20);
         Field field = c1.getDeclaredField("name");
         // 设置java语言访问检查的取消  暴力反射
         field.setAccessible(true);

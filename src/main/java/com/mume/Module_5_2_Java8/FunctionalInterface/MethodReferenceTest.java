@@ -10,7 +10,7 @@ import java.util.function.Supplier;
 public class MethodReferenceTest {
     public static void main(String[] args) {
         // 1.匿名内部类的方式
-        Person person = new Person("com/mume", 15);
+        Person person = new Person("mume", 15);
         Runnable runnable = new Runnable() {
             @Override
             public void run() {
@@ -33,7 +33,7 @@ public class MethodReferenceTest {
                 System.out.println("Object" + o);
             }
         };
-        consumer.accept("com/mume");
+        consumer.accept("mume");
         System.out.println("Person:" + person);
 
         Consumer<String> consumer1 = s -> person.setName(s);
@@ -100,7 +100,7 @@ public class MethodReferenceTest {
         Supplier<Person> supplier2 = new Supplier<Person>() {
             @Override
             public Person get() {
-                return new Person("com/mume", 19);
+                return new Person("mume", 19);
             }
         };
         System.out.println(supplier2.get());
@@ -115,10 +115,10 @@ public class MethodReferenceTest {
                 return new Person(s, integer);
             }
         };
-        System.out.println("Person:" + biFunction.apply("com/mume", 23));
+        System.out.println("Person:" + biFunction.apply("mume", 23));
 
         BiFunction<String, Integer, Person> biFunction1 = Person::new;
-        System.out.println("Person:" + biFunction1.apply("com/mume", 23));
+        System.out.println("Person:" + biFunction1.apply("mume", 23));
 
         // 11. 使用匿名内部类/方法引用的方式通过Function函数式接口创建Person类型并返回
         Function<Integer, Person[]> function3 = new Function<Integer, Person[]>() {

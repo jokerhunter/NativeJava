@@ -18,13 +18,13 @@ public class SerializableList<T> implements Serializable {
         this.elementData = elementData;
     }
 
-    private void writeObject(ObjectOutputStream outputStream) throws IOException {
+    private void writeObject(java.io.ObjectOutputStream outputStream) throws IOException {
         outputStream.defaultWriteObject();
         outputStream.writeObject(elementData);
         System.out.println("writeObject of "+this.getClass().getName());
     }
 
-    private void readObject(ObjectInputStream inputStream) throws IOException, ClassNotFoundException {
+    private void readObject(java.io.ObjectInputStream inputStream) throws IOException, ClassNotFoundException {
         inputStream.defaultReadObject();
         elementData = (T) inputStream.readObject();
         System.out.println("readObject of "+this.getClass().getName());

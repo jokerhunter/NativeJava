@@ -22,7 +22,7 @@ public class PersonConstructorTest {
         System.out.println("反射无参创建对象" + constructor.newInstance());
         // 获取有参构造方法
         constructor = c1.getConstructor(String.class, int.class);
-        System.out.println("反射有参创建对象" + constructor.newInstance("com/mume", 12));
+        System.out.println("反射有参创建对象" + constructor.newInstance("mume", 12));
 
         // 获取c1的所有公共构造方法
         Constructor[] constructors = c1.getConstructors();
