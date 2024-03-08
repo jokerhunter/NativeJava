@@ -1,4 +1,4 @@
-package com.mume.Module_4_ConcurrentProgram.Module_4_3_Thread;
+package com.mume.Module_4_3_Thread;
 
 public class ThreadDaemonTest extends Thread {
     @Override
