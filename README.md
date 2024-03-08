@@ -1,3 +1,8 @@
+
+###### 
+
+###### tips:git initial operation
+
 **…or create a new repository on the command line**
 
 ```shell
