@@ -3,6 +3,7 @@ target/
 !**/src/main/**/target/
 !**/src/test/**/target/
 
+### java project output ###
 out/
 !**/src/main/**/out/
 !**/src/test/**/out/
