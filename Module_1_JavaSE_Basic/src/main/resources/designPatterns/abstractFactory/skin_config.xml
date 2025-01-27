@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<config>
+    <className>com.mume.Module_2_2_DesignPattern.creationalPatterns.abstractFactory.skin.SpringSkinFactory</className>
+</config>

@@ -17,6 +17,7 @@
     <packaging>pom</packaging>
     <modules>
         <module>Module_4_ConcurrentProgram</module>
+        <module>Module_2_1_Algorithm</module>
     </modules>
 
     <properties>

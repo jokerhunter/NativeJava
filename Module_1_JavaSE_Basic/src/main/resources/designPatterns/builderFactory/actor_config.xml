@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<config>
+    <className>com.mume.Module_2_2_DesignPattern.creationalPatterns.builder.actor.HeroBuilderSimple</className>
+    <className2>com.mume.Module_2_2_DesignPattern.creationalPatterns.builder.actor.HeroBuilderStatic</className2>
+    <className3>com.mume.Module_2_2_DesignPattern.creationalPatterns.builder.actor.HeroBuilderImprove</className3>
+    <className4>com.mume.Module_2_2_DesignPattern.creationalPatterns.builder.actor.DevilBuilder</className4>
+</config>

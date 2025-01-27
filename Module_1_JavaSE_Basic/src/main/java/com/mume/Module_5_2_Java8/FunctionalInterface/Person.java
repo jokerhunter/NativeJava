@@ -1,7 +1,5 @@
 package com.mume.Module_5_2_Java8.FunctionalInterface;
 
-import java.util.Comparator;
-
 /**
  * @author mume
  */
