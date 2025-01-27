@@ -1,8 +1,9 @@
 package com.mume.Module_2_2_DesignPattern.creationalPatterns.Singleton;
 
+@SuppressWarnings("unused")
 public class Singleton {
     // 1.声明本类类型的引用指向本类类型的对象并使用private static 关键字修饰
-    private static Singleton singleton = null;
+    private static volatile Singleton singleton = null;
 
 //    static {
 //        singleton.
